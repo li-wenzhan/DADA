@@ -4,7 +4,7 @@ This repository stores the code for our dual-alignment domain adaptation method.
 ## Model
 ### Setup
 **Environment**
-All models were trained and tested on Ubuntu 18.04 with Python 3.7.0 and PyTorch 1.11.0 with CUDA 11.3.
+<br>All models were trained and tested on Ubuntu 18.04 with Python 3.7.0 and PyTorch 1.11.0 with CUDA 11.3.
 You can start by creating a conda virtual environment:
 ```
 conda create --name dada python=3.7 -y
@@ -18,7 +18,7 @@ Among these datasets, `train_origin`, `val` and `test` are obtained directly fro
 
 ### Training
 **Data-alignment**
-First, the DLA network needs to be trained: 
+<br>First, the DLA network needs to be trained: 
 ```
 python train_DLA.py  --subset <task_S2T>
 ```
@@ -28,14 +28,14 @@ python train_DLA.py  --subset A2B
 ```
 
 **Data process for FLA**
-Next, you need to do pre-processing on the transformed data for FLA :
+<br>Next, you need to do pre-processing on the transformed data for FLA :
 ```
 cd tools/FLA/experiments/pedestrian
 python process_data.py
 ```
 
 **Feature-alignment**
-Finally, the FLA network training is run through the following:
+<br>Finally, the FLA network training is run through the following:
 ```
 python train_FLA.py --subset <task_S2T>
 ```
@@ -58,5 +58,4 @@ python test.py --subset A2B
 ```
 
 ### Acknowledgement
-Part of our code is borrowed from [Trajectron++](https://github.com/StanfordASL/Trajectron-plus-plus). 
-We thank the authors for releasing their code and models.
+Part of our code is borrowed from [Trajectron++](https://github.com/StanfordASL/Trajectron-plus-plus). We thank the authors for releasing their code and models.
